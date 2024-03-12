@@ -1,0 +1,17 @@
+:root{
+    --bg:#0ebef;
+    --textColor:aliceblue;
+    --titleStyle: 'Quintessential', cursive;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    background-image: url(./assets/images/bg4.jpg);
+    background-size: cover;
+}
