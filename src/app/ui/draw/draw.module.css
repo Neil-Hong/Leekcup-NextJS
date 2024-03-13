@@ -1,5 +1,274 @@
-.Container{
+   .drawPageContainer {
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+  
+  .drawPageContainer .title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+    color:var(--textColor);
+    font-family: var(--titleStyle);
+  }
+
+  .drawPageContainer .headTitle{
+    text-align: center;
+    color:var(--textColor);
+    font-family: var(--titleStyle);
+}
+  
+  .drawPageContainer .stageContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
+  
+  .drawPageContainer .stageContainer .stage {
+    position: relative;
+    width: 800px;
+    height: 240px;
+    margin: 20px auto;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  }
+  
+  .drawPageContainer .stageContainer .stage .control {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: translateZ(-2000px) rotateY(50deg) rotateZ(0deg);
+    animation: rotate 30s linear infinite;
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap .img {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    font-size: 120px;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% 0px;
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap .img:nth-child(1) {
+    transform: rotateY(35deg) translateZ(650px);
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap .img:nth-child(2) {
+    transform: rotateY(80deg) translateZ(650px);
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap .img:nth-child(3) {
+    transform: rotateY(125deg) translateZ(650px);
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap .img:nth-child(4) {
+    transform: rotateY(170deg) translateZ(650px);
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap .img:nth-child(5) {
+    transform: rotateY(215deg) translateZ(650px);
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap .img:nth-child(6) {
+    transform: rotateY(260deg) translateZ(650px);
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap .img:nth-child(7) {
+    transform: rotateY(305deg) translateZ(650px);
+  }
+  
+  .drawPageContainer .stageContainer .stage .control .imgWrap .img:nth-child(8) {
+    transform: rotateY(350deg) translateZ(650px);
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: translateZ(-2000px) rotateY(0deg);
+    }
+    50% {
+      transform: translateZ(-2000px) rotateY(-360deg);
+    }
+    100% {
+      transform: translateZ(-2000px) rotateY(-720deg);
+    }
+  }
+  
+  .drawPageContainer .drawImage {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+  
+  .drawPageContainer .drawButton {
+    position: relative;
+    z-index: 0;
+    width: 160px;
+    height: 80px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    padding-top: 8px;
+    text-decoration: none;
+    color: #0ebeff;
+    font-family: 'Quintessential';
+    font-size: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .drawPageContainer .drawButton:hover {
+    color: #fff;
+    box-shadow: 0 0 5px var(--color), 0 0 25px var(--color);
+  }
+  
+  .drawPageContainer .drawButton::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 300%;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: 0 0;
+    background-image: conic-gradient(var(--color), var(--color));
+    animation: buttonRotate 2s linear infinite;
+  }
+  
+  .drawPageContainer .drawButton::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 2px;
+    top: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: #000;
+    border-radius: 10px;
+  }
+  
+  .matchTable {
+    width: 80%;
+    height: 400px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 40px;
+    box-shadow: 1em 1em 2em 0.25em rgba(210, 207, 207, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding: 50px;
+    background-image: url(../assets/images/drawbackground.jpg);
+    background-size: cover;
+    overflow-y: scroll;
+    color: white;
+  }
+
+  .matchTable .matchTable1 {
+    overflow: hidden;
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 0.2fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(65, 45, 223);
+    min-height: 60px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .matchTable .matchTable1 .matchTable1Info {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+
+.tableImg {
+    height: 50px;
+    width: 50px;
+  }
+  
+
+  .scaleInHorCenter {
+    -webkit-animation: scale-in-hor-center 1.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: scale-in-hor-center 1.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @-webkit-keyframes scale-in-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+
+  .whiteBackground{
+    animation: showWhite 1s normal;
+}
+
+@keyframes showWhite {
+    0%{
+        background-color: none;
+    }
+    50%{
+        background-color: white;
+    }
+    100%{
+        background-color: none;
+    }
 }
