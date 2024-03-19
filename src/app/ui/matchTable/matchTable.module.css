@@ -1,0 +1,112 @@
+.matchTable {
+    width: 80%;
+    height: 500px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 40px;
+    box-shadow: 1em 1em 2em 0.25em rgba(210, 207, 207, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding: 50px;
+    background-image: url(../assets/images/drawbackground.jpg);
+    background-size: cover;
+    overflow-y: scroll;
+    color: white;
+  }
+
+.teamContainer{
+    width: 80%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    height: 200px;
+}
+
+.teams{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.matchTable2{
+    display: flex;
+    flex-direction: column;
+}
+  .matchTable .matchTable1 {
+    overflow: hidden;
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 0.3fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(65, 45, 223);
+    min-height: 60px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .test{
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr  0.8fr;
+    margin-top:auto;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+    
+  }
+
+  .test2{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    text-align: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: max-content;
+
+  }
+
+  .test4{
+    background-color: rgb(65, 45, 223);
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .test3{
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    align-items: center;
+  }
+
+  .matchTable .matchTable1 .matchTable1Info {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .tableImg {
+    height: 50px;
+    width: 50px;
+  }
+
+  .ImgContainer{
+    display: flex;
+    flex-direction: row;
+    width:100px;
+  }
